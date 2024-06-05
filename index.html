@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 5</title>
+    <style>
+    Body{font-family: Arial, Helvetica, sans-serif; font-size: 20px;}
+    button{font-size: 30px; padding: 30px;}
+    </style>
+</head>
+<body>
+    <h1>CONVERSOR DE MEDIDAS</h1>
+    <button onclick="c()">CONVERTER</button>
+    <section id="r"><p>Aqui</p></section>
+    <script>
+    function c(){
+        let m = window.prompt(`Me fale o valor em Metros(m):`)
+        m = Number(m)
+        let Km = m/1000
+        Km = Number(Km)
+        let Hm = m/100
+        Hm = Number(Hm)
+        let Dam = m/10
+        Dam = Number(Dam)
+        let Dm = m*10
+        Dm = Number(Dm)
+        let cm = m*100
+        cm = Number(cm)
+        let mm = m*1000
+        mm = Number(mm)
+
+        let re = window.document.getElementById(`r`)
+        re.innerHTML = `<p> A distãncia de ${m} metros, corresponde a...</p>
+        <p>${Km} (km)</p>
+        <p>${Hm} (Hm)</p>
+        <p>${Dam} (Dam)</p>
+        <p>${Dm} (Dm)</p>
+        <p>${cm} (cm)</p>
+        <p>${mm} (mm)</p>`
+    }
+    </script>
+</body>
+</html>
